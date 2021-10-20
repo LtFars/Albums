@@ -12,6 +12,12 @@
 		030490232720038200C748D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030490212720038200C748D7 /* LaunchScreen.storyboard */; };
 		0304903F272009ED00C748D7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304903E272009ED00C748D7 /* MainTabBarController.swift */; };
 		03049041272009FC00C748D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049040272009FC00C748D7 /* MainViewController.swift */; };
+		0304904527200D3100C748D7 /* FirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304904427200D3100C748D7 /* FirstSectionCell.swift */; };
+		0304904827200D6200C748D7 /* SecondSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304904727200D6200C748D7 /* SecondSectionCell.swift */; };
+		0304904A272023A300C748D7 /* model.json in Resources */ = {isa = PBXBuildFile; fileRef = 03049049272023A300C748D7 /* model.json */; };
+		0304904D2720243900C748D7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304904C2720243900C748D7 /* File.swift */; };
+		03049050272024EA00C748D7 /* MSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304904F272024EA00C748D7 /* MSection.swift */; };
+		030490522720256800C748D7 /* MChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030490512720256800C748D7 /* MChat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		030490242720038200C748D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0304903E272009ED00C748D7 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		03049040272009FC00C748D7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0304904427200D3100C748D7 /* FirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSectionCell.swift; sourceTree = "<group>"; };
+		0304904727200D6200C748D7 /* SecondSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSectionCell.swift; sourceTree = "<group>"; };
+		03049049272023A300C748D7 /* model.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = model.json; sourceTree = "<group>"; };
+		0304904C2720243900C748D7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		0304904F272024EA00C748D7 /* MSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSection.swift; sourceTree = "<group>"; };
+		030490512720256800C748D7 /* MChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 		030490152720038000C748D7 /* Albums */ = {
 			isa = PBXGroup;
 			children = (
+				03049049272023A300C748D7 /* model.json */,
 				030490362720089300C748D7 /* Resources */,
 				0304903A2720096A00C748D7 /* Source */,
 			);
@@ -99,6 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				030490392720095600C748D7 /* Main */,
+				0304904227200CBE00C748D7 /* CollectionCells */,
+				0304904E272024CF00C748D7 /* DataModel */,
+				0304904B2720242800C748D7 /* Extensions */,
 				0304903B272009B000C748D7 /* App */,
 			);
 			path = Source;
@@ -126,6 +142,48 @@
 				03049040272009FC00C748D7 /* MainViewController.swift */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		0304904227200CBE00C748D7 /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				0304904327200D0C00C748D7 /* FirstSectionCell */,
+				0304904627200D4B00C748D7 /* SecondSectionCell */,
+			);
+			path = CollectionCells;
+			sourceTree = "<group>";
+		};
+		0304904327200D0C00C748D7 /* FirstSectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				0304904427200D3100C748D7 /* FirstSectionCell.swift */,
+			);
+			path = FirstSectionCell;
+			sourceTree = "<group>";
+		};
+		0304904627200D4B00C748D7 /* SecondSectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				0304904727200D6200C748D7 /* SecondSectionCell.swift */,
+			);
+			path = SecondSectionCell;
+			sourceTree = "<group>";
+		};
+		0304904B2720242800C748D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0304904C2720243900C748D7 /* File.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0304904E272024CF00C748D7 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				0304904F272024EA00C748D7 /* MSection.swift */,
+				030490512720256800C748D7 /* MChat.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				030490232720038200C748D7 /* LaunchScreen.storyboard in Resources */,
+				0304904A272023A300C748D7 /* model.json in Resources */,
 				030490202720038200C748D7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,7 +258,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				03049041272009FC00C748D7 /* MainViewController.swift in Sources */,
+				03049050272024EA00C748D7 /* MSection.swift in Sources */,
+				0304904D2720243900C748D7 /* File.swift in Sources */,
+				030490522720256800C748D7 /* MChat.swift in Sources */,
 				0304903F272009ED00C748D7 /* MainTabBarController.swift in Sources */,
+				0304904827200D6200C748D7 /* SecondSectionCell.swift in Sources */,
+				0304904527200D3100C748D7 /* FirstSectionCell.swift in Sources */,
 				030490172720038000C748D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
