@@ -28,7 +28,7 @@ final class MainTabBarController: UITabBarController {
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.navigationBar.shadowImage = UIImage()
         navigationController.navigationBar.isTranslucent = true
-        navigationController.view.backgroundColor = .clear
+        navigationController.view.backgroundColor = .white
 
         return navigationController
     }

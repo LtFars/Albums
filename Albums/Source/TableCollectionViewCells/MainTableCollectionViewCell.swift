@@ -3,27 +3,19 @@ import UIKit
 class MainTableCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "MainTableCollectionViewCell"
-
-    // MARK: - Configure cell
-    
-    func configure(with model: TableOption) {
-        label.text = model.title
-        iconImageView.image = model.icon
-        labelLeft.text = String(model.label)
-        arrawImageView.image = UIImage(systemName: "chevron.right")
-    }
     
     // MARK: - Elements
     
     public let iconContainer: UIView = {
         let view = UIView()
+        view.backgroundColor = .clear
         return view
     }()
     
     public let iconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.tintColor = .systemBlue
-        imageView.backgroundColor = .white
+        imageView.backgroundColor = .clear
         imageView.contentMode = .scaleAspectFit
         
         return imageView
@@ -31,13 +23,14 @@ class MainTableCollectionViewCell: UICollectionViewCell {
     
     public var arrawContainer: UIView = {
         let view = UIView()
+        view.backgroundColor = .clear
         return view
     }()
     
     public let arrawImageView: UIImageView = {
         var imageView = UIImageView()
         imageView.tintColor = .systemGray
-        imageView.backgroundColor = .white
+        imageView.backgroundColor = .clear
         imageView.contentMode = .scaleAspectFit
         
         return imageView
@@ -46,6 +39,7 @@ class MainTableCollectionViewCell: UICollectionViewCell {
     public let label: UILabel = {
         let label = UILabel()
         label.textColor = .systemBlue
+        label.font = .systemFont(ofSize: 22)
         label.numberOfLines = 1
         
         return label
@@ -55,6 +49,12 @@ class MainTableCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = .systemGray
         return label
+    }()
+    
+    private let stripeView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGray4
+        return view
     }()
     
     // MARK: - Init
@@ -76,6 +76,7 @@ class MainTableCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(iconContainer)
         contentView.addSubview(labelLeft)
         contentView.addSubview(arrawContainer)
+        contentView.addSubview(stripeView)
         arrawContainer.addSubview(arrawImageView)
         iconContainer.addSubview(iconImageView)
         
@@ -93,11 +94,11 @@ class MainTableCollectionViewCell: UICollectionViewCell {
         arrawContainer.translatesAutoresizingMaskIntoConstraints = false
         arrawImageView.translatesAutoresizingMaskIntoConstraints = false
         labelLeft.translatesAutoresizingMaskIntoConstraints = false
+        stripeView.translatesAutoresizingMaskIntoConstraints = false
      
         NSLayoutConstraint.activate([
-        
         label.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-        label.leadingAnchor.constraint(equalTo: iconContainer.trailingAnchor),
+        label.leadingAnchor.constraint(equalTo: iconContainer.trailingAnchor, constant: -5),
         label.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
         
         iconContainer.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
@@ -106,21 +107,57 @@ class MainTableCollectionViewCell: UICollectionViewCell {
         iconContainer.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor),
         
         iconImageView.centerYAnchor.constraint(equalTo: iconContainer.centerYAnchor),
-        iconImageView.widthAnchor.constraint(equalTo:iconContainer.widthAnchor, constant: -15),
-        iconImageView.heightAnchor.constraint(equalTo:iconContainer.heightAnchor, constant: -15),
+        iconImageView.widthAnchor.constraint(equalTo:iconContainer.widthAnchor, constant: -24),
+        iconImageView.heightAnchor.constraint(equalTo:iconContainer.heightAnchor, constant: -24),
         
         arrawContainer.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
-        arrawContainer.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -8),
+        arrawContainer.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20),
         arrawContainer.widthAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor),
         arrawContainer.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor),
         
         arrawImageView.centerYAnchor.constraint(equalTo: arrawContainer.centerYAnchor),
         arrawImageView.trailingAnchor.constraint(equalTo: arrawContainer.trailingAnchor, constant: -8),
-        arrawImageView.widthAnchor.constraint(equalTo: arrawContainer.widthAnchor, constant: -24),
-        arrawImageView.heightAnchor.constraint(equalTo: arrawContainer.widthAnchor, constant: -24),
+        arrawImageView.widthAnchor.constraint(equalTo: arrawContainer.widthAnchor, constant: -34),
+        arrawImageView.heightAnchor.constraint(equalTo: arrawContainer.widthAnchor, constant: -34),
         
         labelLeft.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor),
         labelLeft.trailingAnchor.constraint(equalTo: arrawImageView.leadingAnchor, constant: -5),
+
+        stripeView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 10),
+        stripeView.trailingAnchor.constraint(equalTo: label.trailingAnchor, constant: 1000),
+        stripeView.leadingAnchor.constraint(equalTo: label.leadingAnchor),
+        stripeView.heightAnchor.constraint(equalToConstant: 1)
         ])
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        label.text = nil
+        iconImageView.image = nil
+        labelLeft.text = nil
+        arrawImageView.image = nil
+        
+        stripeView.backgroundColor = .systemGray4
+        
+    }
+    
+    // MARK: - Configure cell
+    
+    func configure(with model: TableOption) {
+        label.text = model.title
+        iconImageView.image = model.icon
+        labelLeft.text = String(model.label)
+        arrawImageView.image = UIImage(systemName: "chevron.right")
+        
+        switch model.title {
+        case "Анимированные":
+            stripeView.backgroundColor = .clear
+        case "Недавно удаленные":
+            stripeView.backgroundColor = .clear
+        default:
+            stripeView.backgroundColor = .systemGray4
+        }
+    }
+    
+    
 }

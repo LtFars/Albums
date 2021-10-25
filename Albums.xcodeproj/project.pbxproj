@@ -16,13 +16,11 @@
 		0304904827200D6200C748D7 /* OfferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304904727200D6200C748D7 /* OfferController.swift */; };
 		0304905427206E1F00C748D7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304905327206E1F00C748D7 /* Models.swift */; };
 		03049056272074F200C748D7 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049055272074F200C748D7 /* SearchController.swift */; };
-		03049059272075A000C748D7 /* MediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049058272075A000C748D7 /* MediaCollectionViewCell.swift */; };
-		0304905B272075B900C748D7 /* OfferCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304905A272075B900C748D7 /* OfferCollectionViewCell.swift */; };
-		0304905D272075CA00C748D7 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304905C272075CA00C748D7 /* SearchCollectionViewCell.swift */; };
 		0304905F272075DC00C748D7 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304905E272075DC00C748D7 /* MainCollectionViewCell.swift */; };
 		030490612720778900C748D7 /* ConfigureCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030490602720778900C748D7 /* ConfigureCollectionView.swift */; };
 		0304906427207C6800C748D7 /* MainTableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304906327207C6800C748D7 /* MainTableCollectionViewCell.swift */; };
 		03049066272163CA00C748D7 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049065272163CA00C748D7 /* HeaderCollectionReusableView.swift */; };
+		03EB632527259DAA00DD7C85 /* MainAllPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EB632427259DAA00DD7C85 /* MainAllPhotos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,13 +35,11 @@
 		0304904727200D6200C748D7 /* OfferController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferController.swift; sourceTree = "<group>"; };
 		0304905327206E1F00C748D7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		03049055272074F200C748D7 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
-		03049058272075A000C748D7 /* MediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewCell.swift; sourceTree = "<group>"; };
-		0304905A272075B900C748D7 /* OfferCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionViewCell.swift; sourceTree = "<group>"; };
-		0304905C272075CA00C748D7 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		0304905E272075DC00C748D7 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		030490602720778900C748D7 /* ConfigureCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureCollectionView.swift; sourceTree = "<group>"; };
 		0304906327207C6800C748D7 /* MainTableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableCollectionViewCell.swift; sourceTree = "<group>"; };
 		03049065272163CA00C748D7 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		03EB632427259DAA00DD7C85 /* MainAllPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAllPhotos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				03049040272009FC00C748D7 /* MainViewController.swift */,
+				03EB632327259D6100DD7C85 /* AllPhotos */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -186,9 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				0304905E272075DC00C748D7 /* MainCollectionViewCell.swift */,
-				03049058272075A000C748D7 /* MediaCollectionViewCell.swift */,
-				0304905A272075B900C748D7 /* OfferCollectionViewCell.swift */,
-				0304905C272075CA00C748D7 /* SearchCollectionViewCell.swift */,
 			);
 			path = CollectionCells;
 			sourceTree = "<group>";
@@ -207,6 +201,14 @@
 				03049065272163CA00C748D7 /* HeaderCollectionReusableView.swift */,
 			);
 			path = HeadersCollectionView;
+			sourceTree = "<group>";
+		};
+		03EB632327259D6100DD7C85 /* AllPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				03EB632427259DAA00DD7C85 /* MainAllPhotos.swift */,
+			);
+			path = AllPhotos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,15 +286,13 @@
 				03049041272009FC00C748D7 /* MainViewController.swift in Sources */,
 				0304906427207C6800C748D7 /* MainTableCollectionViewCell.swift in Sources */,
 				0304903F272009ED00C748D7 /* MainTabBarController.swift in Sources */,
+				03EB632527259DAA00DD7C85 /* MainAllPhotos.swift in Sources */,
 				03049056272074F200C748D7 /* SearchController.swift in Sources */,
-				0304905D272075CA00C748D7 /* SearchCollectionViewCell.swift in Sources */,
-				0304905B272075B900C748D7 /* OfferCollectionViewCell.swift in Sources */,
 				0304904827200D6200C748D7 /* OfferController.swift in Sources */,
 				0304905F272075DC00C748D7 /* MainCollectionViewCell.swift in Sources */,
 				030490612720778900C748D7 /* ConfigureCollectionView.swift in Sources */,
 				0304904527200D3100C748D7 /* MediaController.swift in Sources */,
 				030490172720038000C748D7 /* AppDelegate.swift in Sources */,
-				03049059272075A000C748D7 /* MediaCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
