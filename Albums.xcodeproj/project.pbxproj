@@ -12,6 +12,15 @@
 		030490232720038200C748D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030490212720038200C748D7 /* LaunchScreen.storyboard */; };
 		0304903F272009ED00C748D7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304903E272009ED00C748D7 /* MainTabBarController.swift */; };
 		03049041272009FC00C748D7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049040272009FC00C748D7 /* MainViewController.swift */; };
+		0304904527200D3100C748D7 /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304904427200D3100C748D7 /* MediaController.swift */; };
+		0304904827200D6200C748D7 /* OfferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304904727200D6200C748D7 /* OfferController.swift */; };
+		0304905427206E1F00C748D7 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304905327206E1F00C748D7 /* Models.swift */; };
+		03049056272074F200C748D7 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049055272074F200C748D7 /* SearchController.swift */; };
+		0304905F272075DC00C748D7 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304905E272075DC00C748D7 /* MainCollectionViewCell.swift */; };
+		030490612720778900C748D7 /* ConfigureCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030490602720778900C748D7 /* ConfigureCollectionView.swift */; };
+		0304906427207C6800C748D7 /* MainTableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0304906327207C6800C748D7 /* MainTableCollectionViewCell.swift */; };
+		03049066272163CA00C748D7 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03049065272163CA00C748D7 /* HeaderCollectionReusableView.swift */; };
+		03EB632527259DAA00DD7C85 /* MainAllPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EB632427259DAA00DD7C85 /* MainAllPhotos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		030490242720038200C748D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0304903E272009ED00C748D7 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		03049040272009FC00C748D7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0304904427200D3100C748D7 /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
+		0304904727200D6200C748D7 /* OfferController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferController.swift; sourceTree = "<group>"; };
+		0304905327206E1F00C748D7 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		03049055272074F200C748D7 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		0304905E272075DC00C748D7 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		030490602720778900C748D7 /* ConfigureCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureCollectionView.swift; sourceTree = "<group>"; };
+		0304906327207C6800C748D7 /* MainTableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableCollectionViewCell.swift; sourceTree = "<group>"; };
+		03049065272163CA00C748D7 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		03EB632427259DAA00DD7C85 /* MainAllPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAllPhotos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				030490392720095600C748D7 /* Main */,
+				0304904227200CBE00C748D7 /* AlbumControllers */,
+				030490572720755600C748D7 /* CollectionCells */,
+				0304906227207C4200C748D7 /* TableCollectionViewCells */,
+				03049067272163D800C748D7 /* HeadersCollectionView */,
+				0304904E272024CF00C748D7 /* Models */,
+				0304904B2720242800C748D7 /* Extensions */,
 				0304903B272009B000C748D7 /* App */,
 			);
 			path = Source;
@@ -124,8 +148,67 @@
 			isa = PBXGroup;
 			children = (
 				03049040272009FC00C748D7 /* MainViewController.swift */,
+				03EB632327259D6100DD7C85 /* AllPhotos */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		0304904227200CBE00C748D7 /* AlbumControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0304904427200D3100C748D7 /* MediaController.swift */,
+				0304904727200D6200C748D7 /* OfferController.swift */,
+				03049055272074F200C748D7 /* SearchController.swift */,
+			);
+			path = AlbumControllers;
+			sourceTree = "<group>";
+		};
+		0304904B2720242800C748D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				030490602720778900C748D7 /* ConfigureCollectionView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0304904E272024CF00C748D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0304905327206E1F00C748D7 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		030490572720755600C748D7 /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				0304905E272075DC00C748D7 /* MainCollectionViewCell.swift */,
+			);
+			path = CollectionCells;
+			sourceTree = "<group>";
+		};
+		0304906227207C4200C748D7 /* TableCollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				0304906327207C6800C748D7 /* MainTableCollectionViewCell.swift */,
+			);
+			path = TableCollectionViewCells;
+			sourceTree = "<group>";
+		};
+		03049067272163D800C748D7 /* HeadersCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				03049065272163CA00C748D7 /* HeaderCollectionReusableView.swift */,
+			);
+			path = HeadersCollectionView;
+			sourceTree = "<group>";
+		};
+		03EB632327259D6100DD7C85 /* AllPhotos */ = {
+			isa = PBXGroup;
+			children = (
+				03EB632427259DAA00DD7C85 /* MainAllPhotos.swift */,
+			);
+			path = AllPhotos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,8 +281,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03049066272163CA00C748D7 /* HeaderCollectionReusableView.swift in Sources */,
+				0304905427206E1F00C748D7 /* Models.swift in Sources */,
 				03049041272009FC00C748D7 /* MainViewController.swift in Sources */,
+				0304906427207C6800C748D7 /* MainTableCollectionViewCell.swift in Sources */,
 				0304903F272009ED00C748D7 /* MainTabBarController.swift in Sources */,
+				03EB632527259DAA00DD7C85 /* MainAllPhotos.swift in Sources */,
+				03049056272074F200C748D7 /* SearchController.swift in Sources */,
+				0304904827200D6200C748D7 /* OfferController.swift in Sources */,
+				0304905F272075DC00C748D7 /* MainCollectionViewCell.swift in Sources */,
+				030490612720778900C748D7 /* ConfigureCollectionView.swift in Sources */,
+				0304904527200D3100C748D7 /* MediaController.swift in Sources */,
 				030490172720038000C748D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +452,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -390,7 +482,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
